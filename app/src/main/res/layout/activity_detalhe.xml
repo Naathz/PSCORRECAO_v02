@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".DetalheActivity">
+
+    <!--esse text com tools é um elemento que não precisa mudar na internacionalização do string-->
+    <TextView
+        tools:text="#150 Ivysaur"
+        style="@style/label_detalhe"/>
+
+    <!--card view é só um elemento de moldura que vc pode chamar ele aqui novamente-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/ivysaur"/>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:text="@string/label_description"
+        style="@style/label_detalhe"/>
+
+    <!--para fazer a linha de divisão-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCC"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="There is a bud on this Pokémon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon."
+        android:textColor="@color/colorPrimary"/>
+
+    <View style="@style/divisor"/>
+    <TextView
+        android:text="@string/label_habilidades"
+        style="@style/label_detalhe" />
+
+    <View style="@style/divisor"/>
+    <!--criando style para cada item de habilidade, vc diminui a quantidade de código na activity-->
+
+    <LinearLayout
+        style="@style/container_abilities">
+
+        <LinearLayout
+            style="@style/container_abilities_child">
+
+            <TextView
+                style="@style/abilities_field_title"
+                tools:text="3"/>
+
+            <TextView
+                style="@style/abilities_field_subtitle"
+                android:text="@string/label_hp"/>
+        </LinearLayout>
+        <LinearLayout
+        style="@style/container_abilities_child">
+            <TextView
+                style="@style/abilities_field_title"
+                tools:text="3"/>
+
+            <TextView
+                style="@style/abilities_field_subtitle"
+                android:text="@string/label_speed"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View style="@style/divisor"/>
+    <LinearLayout
+        style="@style/container_abilities">
+
+        <LinearLayout
+            style="@style/container_abilities_child">
+
+            <TextView
+                style="@style/abilities_field_title"
+                tools:text="3"/>
+
+            <TextView
+                style="@style/abilities_field_subtitle"
+                android:text="@string/label_attack"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/container_abilities_child">
+            <TextView
+                style="@style/abilities_field_title"
+                tools:text="3"/>
+
+            <TextView
+                style="@style/abilities_field_subtitle"
+                android:text="@string/label_defense"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
